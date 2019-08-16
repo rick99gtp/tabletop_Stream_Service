@@ -8,8 +8,8 @@ function Scoreboard(props) {
     var scoreboardStyle = {
         width: "80%",
         display: "grid",
-        gridTemplateColumns: "20% repeat(15, 1fr)",
-        gridTemplateRows: "repeat(3, auto",
+        gridTemplateColumns: "25% repeat(18, 1fr)",
+        gridTemplateRows: "repeat(3, 1fr)"
     };
 
     return (

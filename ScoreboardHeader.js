@@ -3,8 +3,10 @@ import React from 'react';
 function ScoreboardHeader() {
     
     var headerStyle = {
-        backgroundColor: "#ccc",
-        textAlign: "center"
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "#ccc"
     };
 
     return (
@@ -25,6 +27,9 @@ function ScoreboardHeader() {
             <div style={headerStyle}>13</div>
             <div style={headerStyle}>14</div>
             <div style={headerStyle}>15</div>
+            <div style={headerStyle}>R</div>
+            <div style={headerStyle}>H</div>
+            <div style={headerStyle}>E</div>
         </React.Fragment>
     );
 }

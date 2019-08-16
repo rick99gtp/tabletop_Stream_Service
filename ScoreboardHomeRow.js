@@ -28,6 +28,9 @@ function ScoreboardHomeRow(props) {
             <div style={homeRow} className="homeRow13">0</div>
             <div style={homeRow} className="homeRow14">0</div>
             <div style={homeRow} className="homeRow15">0</div>
+            <div style={homeRow} className="homeRowR">0</div>
+            <div style={homeRow} className="homeRowH">0</div>
+            <div style={homeRow} className="homeRowE">0</div>
         </React.Fragment>
     );
 }

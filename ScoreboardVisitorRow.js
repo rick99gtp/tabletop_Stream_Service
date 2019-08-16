@@ -28,6 +28,9 @@ function ScoreboardVisitorRow(props) {
             <div style={visRow} className="visRow13">0</div>
             <div style={visRow} className="visRow14">0</div>
             <div style={visRow} className="visRow15">0</div>
+            <div style={visRow} className="visRowR">0</div>
+            <div style={visRow} className="visRowH">0</div>
+            <div style={visRow} className="visRowE">0</div>
         </React.Fragment>
     );
 }
