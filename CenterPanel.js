@@ -8,7 +8,8 @@ function CenterPanel(props) {
     var centerpanel = {
         display: "grid",
         gridTemplateColumns: "20% 60% 20%",
-        gridTemplateRows: "auto"
+        gridTemplateRows: "auto",
+        padding: "5px"
     };
 
     return (

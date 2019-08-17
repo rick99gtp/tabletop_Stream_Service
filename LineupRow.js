@@ -3,22 +3,39 @@ import React from 'react';
 function LineupRow(props) {
 
     var lineupStyle = {
+        fontSize: "28px",
+        display: "grid",
+        gridTemplateColumns: "1fr 7fr 1fr",
+        gridTemplateRows: "1fr .5fr"
+    };
+
+    var lineupNumStyle = {
         display: "flex",
-        fontSize: "14px"
+        justifyContent: "center",
+        alignItems: "center"
+    }
+
+    var lineupNameStyle = {
+        display: "flex",
+        alignItems: "center"
+    };
+
+    var lineupPosStyle = {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
     };
 
     return (
-        <div>
-            <div style={lineupStyle}>
-                <div>
-                    {props.lineupNum}
-                </div>
-                <div>
-                    {props.name}
-                </div>
-                <div>
-                    {props.pos}
-                </div>
+        <div style={lineupStyle}>
+            <div style={lineupNumStyle}>
+                {props.lineupNum}
+            </div>
+            <div style={lineupNameStyle}>
+                {props.name}
+            </div>
+            <div style={lineupPosStyle}>
+                {props.pos}
             </div>
         </div>
     );
