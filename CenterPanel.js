@@ -1,22 +1,24 @@
 import React from 'react';
-import VisLineup from './VisLineup';
+import Scoreboard from './Scoreboard';
 import ScoreSheet from './ScoreSheet';
-import HomeLineup from './HomeLineup';
+import ResultsCenter from './ResultsCenter';
 
 function CenterPanel(props) {
 
-    var centerpanel = {
+    const cpStyle = {
         display: "grid",
-        gridTemplateColumns: "20% 60% 20%",
-        gridTemplateRows: "auto",
-        padding: "5px"
+        gridTemplateColumns: "1",
+        gridTemplateRows: "1fr 6fr 1fr",
+        border: 0,
+        padding: 0,
+        boxSizing: "border-box"
     };
 
     return (
-        <div style={centerpanel}>
-            <VisLineup {...props}/>
+        <div style={cpStyle}>
+            <Scoreboard />
             <ScoreSheet />
-            <HomeLineup {...props}/>
+            <ResultsCenter />
         </div>
     );
 }

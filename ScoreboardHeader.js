@@ -11,7 +11,6 @@ function ScoreboardHeader() {
 
     return (
         <React.Fragment>
-            <div style={headerStyle}>Team</div>
             <div style={headerStyle}>1</div>
             <div style={headerStyle}>2</div>
             <div style={headerStyle}>3</div>

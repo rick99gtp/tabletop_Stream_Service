@@ -2,25 +2,26 @@ import React from 'react';
 
 function LineupRow(props) {
 
-    var lineupStyle = {
+    const lineupStyle = {
         fontSize: "28px",
         display: "grid",
-        gridTemplateColumns: "1fr 7fr 1fr",
-        gridTemplateRows: "1fr .5fr"
+        gridTemplateColumns: "1fr 6fr 2fr",
+        gridTemplateRows: "1fr"
     };
 
-    var lineupNumStyle = {
+    const lineupNumStyle = {
         display: "flex",
         justifyContent: "center",
         alignItems: "center"
     }
 
-    var lineupNameStyle = {
+    const lineupNameStyle = {
         display: "flex",
-        alignItems: "center"
+        alignItems: "center",
+        paddingLeft: "5px"
     };
 
-    var lineupPosStyle = {
+    const lineupPosStyle = {
         display: "flex",
         justifyContent: "center",
         alignItems: "center"

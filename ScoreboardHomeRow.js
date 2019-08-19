@@ -2,17 +2,12 @@ import React from 'react';
 
 function ScoreboardHomeRow(props) {
 
-    var homeRowName = {
-        paddingLeft: "10px"
-    };
-
     var homeRow = {
         textAlign: "center"
     };
 
     return (
         <React.Fragment>
-            <div style={homeRowName}>{props.teamName}</div>
             <div style={homeRow} className="homeRow1">0</div>
             <div style={homeRow} className="homeRow2">0</div>
             <div style={homeRow} className="homeRow3">0</div>

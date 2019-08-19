@@ -1,18 +1,18 @@
 import React from 'react';
-import TopPanel from './TopPanel';
+import LeftPanel from './LeftPanel';
 import CenterPanel from './CenterPanel';
-
-import './App.css';
+import RightPanel from './RightPanel';
+import './index.css';
 
 class App extends React.Component {
   constructor() {
     super();
 
     this.state = {
-      vTeamName: "vTeamName",
-      hTeamName: "hTeamName",
-      vTeamAbbr: "VIS",
-      hTeamAbbr: "HOM",
+      vTeamName: "Rangers",
+      hTeamName: "Angels",
+      vTeamAbbr: "TEX",
+      hTeamAbbr: "LAA",
       vPitcherName: "vPitcher",
       hPitcherName: "hPitcher",
       vPitcherPitches: 0,
@@ -29,113 +29,97 @@ class App extends React.Component {
       vLineup: [
         {
           name: "vBatter1",
-          pos: "vPos1"
+          pos: "C"
         },
         {
           name: "vBatter2",
-          pos: "vPos2"
+          pos: "1B"
         },
         {
           name: "vBatter3",
-          pos: "vPos3"
+          pos: "2B"
         },
         {
           name: "vBatter4",
-          pos: "vPos4"
+          pos: "3B"
         },
         {
           name: "vBatter5",
-          pos: "vPos5"
+          pos: "SS"
         },
         {
           name: "vBatter6",
-          pos: "vPos6"
+          pos: "LF"
         },
         {
           name: "vBatter7",
-          pos: "vPos7"
+          pos: "CF"
         },
         {
           name: "vBatter8",
-          pos: "vPos8"
+          pos: "RF"
         },
         {
           name: "vBatter9",
-          pos: "vPos9"
+          pos: "DH"
         }
       ],
       hLineup: [
         {
           name: "hBatter1",
-          pos: "hPos1"
+          pos: "C"
         },
         {
           name: "hBatter2",
-          pos: "hPos2"
+          pos: "1B"
         },
         {
           name: "hBatter3",
-          pos: "hPos3"
+          pos: "2B"
         },
         {
           name: "hBatter4",
-          pos: "hPos4"
+          pos: "3B"
         },
         {
           name: "hBatter5",
-          pos: "hPos5"
+          pos: "SS"
         },
         {
           name: "hBatter6",
-          pos: "hPos6"
+          pos: "LF"
         },
         {
           name: "hBatter7",
-          pos: "hPos7"
+          pos: "CF"
         },
         {
           name: "hBatter8",
-          pos: "hPos8"
+          pos: "RF"
         },
         {
           name: "hBatter9",
-          pos: "hPos9"
+          pos: "DH"
         }
       ]
     };
   } 
-  
+
   render() {
     var appMain = {
-      width: "100vw",
-      height: "100vh",
+      display: "grid",
+      gridTemplateColumns: "1fr 4fr 1fr",
+      gridTemplateRows: "1fr",
       margin: "0",
       padding: "0",
-      boxSizing: "border-box"
+      boxSizing: "border-box",
+      height: "100vh",
+      width: "100vw"
     };
 
     return (
       <div style={appMain}>
-        <TopPanel
-          inning={this.state.inning}
-          teamBatting={this.state.teamBatting}
-          outs={this.state.outs}
-          pitchCount={this.state.pitchCount}
-          vRuns={this.state.vRuns}
-          hRuns={this.state.hRuns}
-          vPitcherPitches={this.state.vPitcherPitches}
-          hPitcherPitches={this.state.hPitcherPitches}
-          vTeamAbbr={this.state.vTeamAbbr}
-          hTeamAbbr={this.state.hTeamAbbr}
-          vPitcherName={this.state.vPitcherName}
-          hPitcherName={this.state.hPitcherName}
-          vTeamName={this.state.vTeamName}
-          hTeamName={this.state.hTeamName}
-          runnerOn1st={this.state.runnerOn1st}
-          runnerOn2nd={this.state.runnerOn2nd}
-          runnerOn3rd={this.state.runnerOn3rd}
-        />
-        <CenterPanel
+        <LeftPanel
           vBatter1Name={this.state.vLineup[0].name}
           vBatter2Name={this.state.vLineup[1].name}
           vBatter3Name={this.state.vLineup[2].name}
@@ -172,7 +156,13 @@ class App extends React.Component {
           hBatter7Pos={this.state.hLineup[6].pos}
           hBatter8Pos={this.state.hLineup[7].pos}
           hBatter9Pos={this.state.hLineup[8].pos}
+          vTeamName={this.state.vTeamName}
+          hTeamName={this.state.hTeamName}
         />
+        <CenterPanel
+          
+        />
+        <RightPanel />
       </div>
     );
   }
