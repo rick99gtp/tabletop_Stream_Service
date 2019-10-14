@@ -8,7 +8,8 @@ function LeftPanel(props) {
     var leftpanel = {
         display: "grid",
         gridTemplateColumns: "1fr",
-        gridTemplateRows: "1fr 6fr 1fr"
+        gridTemplateRows: "1fr 6fr 1fr",
+        fontSize: "15px"
     };
 
     return (

@@ -5,7 +5,9 @@ function Lineup(props) {
 
     var vlineupStyle = {
         backgroundColor: "#ddd",
-        minHeight: "60vh"
+        display: "grid",
+        gridTemplateColumns: "1fr",
+        gridTemplateRows: "repeat(9, 1fr)"
     };
 
     return (

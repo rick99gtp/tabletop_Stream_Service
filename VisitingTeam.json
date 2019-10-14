@@ -1,0 +1,24 @@
+[
+    {
+        "teamname": "Texas Rangers",
+        "lineup1": "E. Combs",
+        "lineup2": "M. Koenig",
+        "lineup3": "B. Ruth",
+        "lineup4": "L. Gehrig",
+        "lineup5": "B. Meusel",
+        "lineup6": "T. Lazzeri",
+        "lineup7": "J. Dugan",
+        "lineup8": "P. Collins",
+        "lineup9": "W. Hoyt",
+        "pitcher": "W. Hoyt",
+        "pos1": "CF",
+        "pos2": "SS",
+        "pos3": "RF",
+        "pos4": "1B",
+        "pos5": "LF",
+        "pos6": "2B",
+        "pos7": "3B",
+        "pos8": "C",
+        "pos9": "P"
+    }
+]

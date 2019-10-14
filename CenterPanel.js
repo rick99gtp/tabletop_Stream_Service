@@ -14,11 +14,20 @@ function CenterPanel(props) {
         boxSizing: "border-box"
     };
 
+    let scoresheetToShow;
+
+    if(props.teamBatting === 0) {
+        scoresheetToShow = <ScoreSheet playerCell={props.vPlayerCell} />;
+    }
+    else {
+        scoresheetToShow = <ScoreSheet playerCell={props.hPlayerCell} />;
+    }
+
     return (
         <div style={cpStyle}>
             <Scoreboard />
-            <ScoreSheet />
-            <ResultsCenter />
+            {scoresheetToShow}
+            <ResultsCenter btn_k={props.btn_k} btn_bb={props.btn_bb} btn_hbp={props.btn_hbp}/>
         </div>
     );
 }

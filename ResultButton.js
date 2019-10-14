@@ -3,8 +3,9 @@ import React from 'react';
 function ResultButton(props) {
 
     return(
-        <div className={props.thisClassName}>
-            {props.name}
+        <div onClick={props.btn_clicked} className={props.thisClassName}>
+            <div>{props.name}</div>
+            <div>{props.throws}</div>
         </div>
     );
 }

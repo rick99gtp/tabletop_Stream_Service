@@ -2,7 +2,7 @@ import React from 'react';
 import Lineup from './Lineup';
 
 function VisLineup(props) {
-    
+
     return (
         <Lineup
             batter1name={props.vBatter1Name}

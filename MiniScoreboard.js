@@ -14,7 +14,8 @@ function MiniScoreboard(props) {
         display: "grid",
         gridTemplateColumns: "15% 23% 24% 23% 15%",
         gridTemplateRows: "20% 30% 30% 20%",
-        fontSize: "24px"
+        fontSize: "24px",
+        padding: "5px 5px 5px 0px"
     };
 
     return (

@@ -18,7 +18,8 @@ function LineupRow(props) {
     const lineupNameStyle = {
         display: "flex",
         alignItems: "center",
-        paddingLeft: "5px"
+        paddingLeft: "5px",
+        fontSize: "24px"
     };
 
     const lineupPosStyle = {

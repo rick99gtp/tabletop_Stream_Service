@@ -1,7 +1,7 @@
 import React from 'react';
 import ResultButton from './ResultButton';
 
-function ResultsLeft(props) {
+function ResultsRight(props) {
 
     const rlStyle = {
         display: "grid",
@@ -12,7 +12,7 @@ function ResultsLeft(props) {
 
     return (
         <div style={rlStyle}>
-            <ResultButton name="M. Minor" throws="L" thisClassName="btn btn-blue pitcher-button"/>
+            <ResultButton name={props.pitcherName} throws={props.pitcherThrows} thisClassName="btn btn-blue pitcher-button"/>
             <div className="pitcher-stats">
                 <div className="pitcher-stats-upper">
                     <div>IP</div>
@@ -35,4 +35,4 @@ function ResultsLeft(props) {
     );
 }
 
-export default ResultsLeft;
+export default ResultsRight;
