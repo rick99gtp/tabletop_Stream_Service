@@ -76,6 +76,18 @@ code {
   color: white;
 }
 
+.btn-red-disabled {
+  pointer-events: none;
+  color: rgba(255, 0, 0, .35);
+  border: 1px solid rgba(255, 0, 0, .35);
+}
+
+.btn-green-disabled {
+  pointer-events: none;
+  color: rgba(0, 128, 0, .35);
+  border: 1px solid rgba(0, 128, 0, .35);
+}
+
 .pitcher-button {
   display: flex;
   justify-content: space-between;

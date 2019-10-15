@@ -76,7 +76,11 @@ const handleClick_ibb = function(result) {
         vColumn: newVColumn,
         runnersOnBase: basesArray,
         runnersOnBaseColumn: basesColumnArray,
-        show_bb_modal: false
+        show_bb_modal: false,
+        wp_active: true,
+        pb_active: true,
+        sb_active: true,
+        cs_active: true
       }
     });
   }
@@ -146,7 +150,11 @@ const handleClick_ibb = function(result) {
         hColumn: newHColumn,
         runnersOnBase: basesArray,
         runnersOnBaseColumn: basesColumnArray,
-        show_bb_modal: false
+        show_bb_modal: false,
+        wp_active: true,
+        pb_active: true,
+        sb_active: true,
+        cs_active: true
       }
     });
   }

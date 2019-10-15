@@ -7,12 +7,29 @@ import handleClick_k_looking from './handleClick_k_looking';
 import handleClick_bb from './handleClick_bb';
 import handleClick_ibb from './handleClick_ibb';
 import handleClick_hbp from './handleClick_hbp';
+import handleClick_pop1 from './handleClick_pop1';
+import handleClick_pop2 from './handleClick_pop2';
+import handleClick_pop3 from './handleClick_pop3';
+import handleClick_pop4 from './handleClick_pop4';
+import handleClick_pop5 from './handleClick_pop5';
+import handleClick_pop6 from './handleClick_pop6';
+import handleClick_pop7 from './handleClick_pop7';
+import handleClick_pop8 from './handleClick_pop8';
+import handleClick_pop9 from './handleClick_pop9';
+
 import ModalK from './ModalK';
 import ModalBB from './ModalBB';
+import ModalPOP from './ModalPOP';
+
 import handleClick_K_ShowModal from './handleClick_K_ShowModal';
 import handleClick_K_CloseModal from './handleClick_K_CloseModal';
+
 import handleClick_BB_ShowModal from './handleClick_BB_ShowModal';
 import handleClick_BB_CloseModal from './handleClick_BB_CloseModal';
+
+import handleClick_POP_ShowModal from './handleClick_POP_ShowModal';
+import handleClick_POP_CloseModal from './handleClick_POP_CloseModal';
+
 import './index.css';
 
 class App extends React.Component {
@@ -20,7 +37,12 @@ class App extends React.Component {
     super();
 
     this.state = {
+      wp_active: false,
+      pb_active: false,
+      sb_active: false,
+      cs_active: false,
       show_k_modal: false,
+      show_pop_modal: false,
       vTeamName: "Rangers",
       hTeamName: "Angels",
       vTeamAbbr: "TEX",
@@ -3136,6 +3158,19 @@ class App extends React.Component {
     // handleClick for HBP
     this.handleClick_hbp = handleClick_hbp.bind(this);
 
+    // handleClick for POPUP
+    this.handleClick_POP_ShowModal = handleClick_POP_ShowModal.bind(this);
+    this.handleClick_POP_CloseModal = handleClick_POP_CloseModal.bind(this);
+    this.handleClick_pop1 = handleClick_pop1.bind(this);
+    this.handleClick_pop2 = handleClick_pop2.bind(this);
+    this.handleClick_pop3 = handleClick_pop3.bind(this);
+    this.handleClick_pop4 = handleClick_pop4.bind(this);
+    this.handleClick_pop5 = handleClick_pop5.bind(this);
+    this.handleClick_pop6 = handleClick_pop6.bind(this);
+    this.handleClick_pop7 = handleClick_pop7.bind(this);
+    this.handleClick_pop8 = handleClick_pop8.bind(this);
+    this.handleClick_pop9 = handleClick_pop9.bind(this);
+
   }
 
   render() {
@@ -3184,6 +3219,11 @@ class App extends React.Component {
           btn_k={this.handleClick_K_ShowModal}
           btn_bb={this.handleClick_BB_ShowModal}
           btn_hbp={this.handleClick_hbp}
+          wp_active={this.state.wp_active}
+          pb_active={this.state.pb_active}
+          sb_active={this.state.sb_active}
+          cs_active={this.state.cs_active}
+          btn_pop={this.handleClick_POP_ShowModal}
         />
         <RightPanel
           hBatter1Name={this.state.hLineup[0].name}
@@ -3209,6 +3249,7 @@ class App extends React.Component {
          />
          <ModalK result1={this.handleClick_k} result2={this.handleClick_k_looking} show={this.state.show_k_modal} close={this.handleClick_K_CloseModal} />
          <ModalBB result1={this.handleClick_bb} result2={this.handleClick_ibb} show={this.state.show_bb_modal} close={this.handleClick_BB_CloseModal} />
+         <ModalPOP result1={this.handleClick_pop1} result2={this.handleClick_pop2} result3={this.handleClick_pop3} result4={this.handleClick_pop4} result5={this.handleClick_pop5} result6={this.handleClick_pop6} result7={this.handleClick_pop7} result8={this.handleClick_pop8} result9={this.handleClick_pop9} show={this.state.show_pop_modal} close={this.handleClick_POP_CloseModal}/>
       </div>
     );
   }
