@@ -45,6 +45,15 @@ function ScoreSheetRow(props) {
                 <div className="firstbasetext">
                     {props.firstbasetext0}
                 </div>
+                <div className="secondbasetext">
+                    {props.secondbasetext0}
+                </div>
+                <div className="thirdbasetext">
+                    {props.thirdbasetext0}
+                </div>
+                <div className="homebasetext">
+                    {props.homebasetext0}
+                </div>
             </div>
             <div style={imgList[1]} >
                 <img src={props.bgimage1} alt="fff" />
@@ -53,6 +62,15 @@ function ScoreSheetRow(props) {
                 </div>
                 <div className="firstbasetext">
                     {props.firstbasetext1}
+                </div>
+                <div className="secondbasetext">
+                    {props.secondbasetext1}
+                </div>
+                <div className="thirdbasetext">
+                    {props.thirdbasetext1}
+                </div>
+                <div className="homebasetext">
+                    {props.homebasetext1}
                 </div>
             </div>
             <div style={imgList[2]} >
@@ -63,6 +81,15 @@ function ScoreSheetRow(props) {
                 <div className="firstbasetext">
                     {props.firstbasetext2}
                 </div>
+                <div className="secondbasetext">
+                    {props.secondbasetext2}
+                </div>
+                <div className="thirdbasetext">
+                    {props.thirdbasetext2}
+                </div>
+                <div className="homebasetext">
+                    {props.homebasetext2}
+                </div>
             </div>
             <div style={imgList[3]} >
                 <img src={props.bgimage3} alt="fff" />
@@ -71,6 +98,15 @@ function ScoreSheetRow(props) {
                 </div>
                 <div className="firstbasetext">
                     {props.firstbasetext3}
+                </div>
+                <div className="secondbasetext">
+                    {props.secondbasetext3}
+                </div>
+                <div className="thirdbasetext">
+                    {props.thirdbasetext3}
+                </div>
+                <div className="homebasetext">
+                    {props.homebasetext3}
                 </div>
             </div>
             <div style={imgList[4]} >
@@ -81,6 +117,15 @@ function ScoreSheetRow(props) {
                 <div className="firstbasetext">
                     {props.firstbasetext4}
                 </div>
+                <div className="secondbasetext">
+                    {props.secondbasetext4}
+                </div>
+                <div className="thirdbasetext">
+                    {props.thirdbasetext4}
+                </div>
+                <div className="homebasetext">
+                    {props.homebasetext4}
+                </div>
             </div>
             <div style={imgList[5]} >
                 <img src={props.bgimage5} alt="fff" />
@@ -89,6 +134,15 @@ function ScoreSheetRow(props) {
                 </div>
                 <div className="firstbasetext">
                     {props.firstbasetext5}
+                </div>
+                <div className="secondbasetext">
+                    {props.secondbasetext5}
+                </div>
+                <div className="thirdbasetext">
+                    {props.thirdbasetext5}
+                </div>
+                <div className="homebasetext">
+                    {props.homebasetext5}
                 </div>
             </div>
             <div style={imgList[6]} >
@@ -99,6 +153,15 @@ function ScoreSheetRow(props) {
                 <div className="firstbasetext">
                     {props.firstbasetext6}
                 </div>
+                <div className="secondbasetext">
+                    {props.secondbasetext6}
+                </div>
+                <div className="thirdbasetext">
+                    {props.thirdbasetext6}
+                </div>
+                <div className="homebasetext">
+                    {props.homebasetext6}
+                </div>
             </div>
             <div style={imgList[7]} >
                 <img src={props.bgimage7} alt="fff" />
@@ -107,6 +170,15 @@ function ScoreSheetRow(props) {
                 </div>
                 <div className="firstbasetext">
                     {props.firstbasetext7}
+                </div>
+                <div className="secondbasetext">
+                    {props.secondbasetext7}
+                </div>
+                <div className="thirdbasetext">
+                    {props.thirdbasetext7}
+                </div>
+                <div className="homebasetext">
+                    {props.homebasetext7}
                 </div>
             </div>
             <div style={imgList[8]} >
@@ -117,6 +189,15 @@ function ScoreSheetRow(props) {
                 <div className="firstbasetext">
                     {props.firstbasetext8}
                 </div>
+                <div className="secondbasetext">
+                    {props.secondbasetext8}
+                </div>
+                <div className="thirdbasetext">
+                    {props.thirdbasetext8}
+                </div>
+                <div className="homebasetext">
+                    {props.homebasetext8}
+                </div>
             </div>
             <div style={imgList[9]} >
                 <img src={props.bgimage9} alt="fff" />
@@ -125,6 +206,15 @@ function ScoreSheetRow(props) {
                 </div>
                 <div className="firstbasetext">
                     {props.firstbasetext9}
+                </div>
+                <div className="secondbasetext">
+                    {props.secondbasetext9}
+                </div>
+                <div className="thirdbasetext">
+                    {props.thirdbasetext9}
+                </div>
+                <div className="homebasetext">
+                    {props.homebasetext9}
                 </div>
             </div>
             <div style={imgList[10]} >
@@ -135,6 +225,15 @@ function ScoreSheetRow(props) {
                 <div className="firstbasetext">
                     {props.firstbasetext10}
                 </div>
+                <div className="secondbasetext">
+                    {props.secondbasetext10}
+                </div>
+                <div className="thirdbasetext">
+                    {props.thirdbasetext10}
+                </div>
+                <div className="homebasetext">
+                    {props.homebasetext10}
+                </div>
             </div>
             <div style={imgList[11]} >
                 <img src={props.bgimage11} alt="fff" />
@@ -143,6 +242,15 @@ function ScoreSheetRow(props) {
                 </div>
                 <div className="firstbasetext">
                     {props.firstbasetext11}
+                </div>
+                <div className="secondbasetext">
+                    {props.secondbasetext11}
+                </div>
+                <div className="thirdbasetext">
+                    {props.thirdbasetext11}
+                </div>
+                <div className="homebasetext">
+                    {props.homebasetext11}
                 </div>
             </div>
             <div style={imgList[12]} >
@@ -153,6 +261,15 @@ function ScoreSheetRow(props) {
                 <div className="firstbasetext">
                     {props.firstbasetext12}
                 </div>
+                <div className="secondbasetext">
+                    {props.secondbasetext12}
+                </div>
+                <div className="thirdbasetext">
+                    {props.thirdbasetext12}
+                </div>
+                <div className="homebasetext">
+                    {props.homebasetext12}
+                </div>
             </div>
             <div style={imgList[13]} >
                 <img src={props.bgimage13} alt="fff" />
@@ -161,6 +278,15 @@ function ScoreSheetRow(props) {
                 </div>
                 <div className="firstbasetext">
                     {props.firstbasetext13}
+                </div>
+                <div className="secondbasetext">
+                    {props.secondbasetext13}
+                </div>
+                <div className="thirdbasetext">
+                    {props.thirdbasetext13}
+                </div>
+                <div className="homebasetext">
+                    {props.homebasetext13}
                 </div>
             </div>
             <div style={imgList[14]} >
@@ -171,6 +297,15 @@ function ScoreSheetRow(props) {
                 <div className="firstbasetext">
                     {props.firstbasetext14}
                 </div>
+                <div className="secondbasetext">
+                    {props.secondbasetext14}
+                </div>
+                <div className="thirdbasetext">
+                    {props.thirdbasetext14}
+                </div>
+                <div className="homebasetext">
+                    {props.homebasetext14}
+                </div>
             </div>
             <div style={imgList[15]} >
                 <img src={props.bgimage15} alt="fff" />
@@ -179,6 +314,15 @@ function ScoreSheetRow(props) {
                 </div>
                 <div className="firstbasetext">
                     {props.firstbasetext15}
+                </div>
+                <div className="secondbasetext">
+                    {props.secondbasetext15}
+                </div>
+                <div className="thirdbasetext">
+                    {props.thirdbasetext15}
+                </div>
+                <div className="homebasetext">
+                    {props.homebasetext15}
                 </div>
             </div>
             <div style={imgList[16]} >
@@ -189,6 +333,15 @@ function ScoreSheetRow(props) {
                 <div className="firstbasetext">
                     {props.firstbasetext16}
                 </div>
+                <div className="secondbasetext">
+                    {props.secondbasetext16}
+                </div>
+                <div className="thirdbasetext">
+                    {props.thirdbasetext16}
+                </div>
+                <div className="homebasetext">
+                    {props.homebasetext16}
+                </div>
             </div>
             <div style={imgList[17]} >
                 <img src={props.bgimage17} alt="fff" />
@@ -197,6 +350,15 @@ function ScoreSheetRow(props) {
                 </div>
                 <div className="firstbasetext">
                     {props.firstbasetext17}
+                </div>
+                <div className="secondbasetext">
+                    {props.secondbasetext17}
+                </div>
+                <div className="thirdbasetext">
+                    {props.thirdbasetext17}
+                </div>
+                <div className="homebasetext">
+                    {props.homebasetext17}
                 </div>
             </div>
         </div>

@@ -27,7 +27,7 @@ function CenterPanel(props) {
         <div style={cpStyle}>
             <Scoreboard />
             {scoresheetToShow}
-            <ResultsCenter btn_pop={props.btn_pop} btn_k={props.btn_k} btn_bb={props.btn_bb} btn_hbp={props.btn_hbp} btn_wp={props.wp_active} btn_pb={props.pb_active} btn_sb={props.sb_active} btn_cs={props.cs_active}/>
+            <ResultsCenter btn_wp={props.btn_wp} btn_pop={props.btn_pop} btn_k={props.btn_k} btn_bb={props.btn_bb} btn_hbp={props.btn_hbp} btn_wp_active={props.wp_active} btn_pb={props.pb_active} btn_sb={props.sb_active} btn_cs={props.cs_active}/>
         </div>
     );
 }

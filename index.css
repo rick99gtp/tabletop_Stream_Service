@@ -211,7 +211,31 @@ code {
 
 .firstbasetext {
   position: absolute;
-  right: 0;
+  right: 0%;
+  top: 65%;
+  color: black;
+  font-size: 14px;
+}
+
+.secondbasetext {
+  position: absolute;
+  right: 5%;
+  top: 10%;
+  color: black;
+  font-size: 14px;
+}
+
+.thirdbasetext {
+  position: absolute;
+  left: 5%;
+  top: 10%;
+  color: black;
+  font-size: 14px;
+}
+
+.homebasetext {
+  position: absolute;
+  left: 5%;
   top: 65%;
   color: black;
   font-size: 14px;
