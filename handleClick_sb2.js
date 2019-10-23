@@ -20,10 +20,8 @@ const handleClick_sb2 = function() {
       }
     }
     // stealing 2nd already highlighted, if other runners leave steal_btn_active enabled
-    else if(prevState.highlight_sb1 || prevState.highlight_sb3) {
-      return {
-        highlight_sb2: false
-      }
+    else if(prevState.highlight_sb1) {
+      return null;
     }
     else {
       return {
@@ -33,4 +31,5 @@ const handleClick_sb2 = function() {
     }
   });
 }
+
 export default handleClick_sb2;
