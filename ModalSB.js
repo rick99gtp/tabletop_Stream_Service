@@ -61,7 +61,7 @@ class ModalSB extends React.Component {
                         STEAL HOME
                     </div>
                 </div>
-                <div className={stealBtnClassName} onClick={this.props.close}>
+                <div className={stealBtnClassName} onClick={this.props.steal}>
                     STEAL!
                 </div>
                 <div className="btn modal-cancel" onClick={this.props.close}>

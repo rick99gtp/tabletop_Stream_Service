@@ -3279,7 +3279,7 @@ class App extends React.Component {
          <ModalK result1={this.handleClick_k} result2={this.handleClick_k_looking} show={this.state.show_k_modal} close={this.handleClick_K_CloseModal} />
          <ModalBB result1={this.handleClick_bb} result2={this.handleClick_ibb} show={this.state.show_bb_modal} close={this.handleClick_BB_CloseModal} />
          <ModalPOP result1={this.handleClick_pop1} result2={this.handleClick_pop2} result3={this.handleClick_pop3} result4={this.handleClick_pop4} result5={this.handleClick_pop5} result6={this.handleClick_pop6} result7={this.handleClick_pop7} result8={this.handleClick_pop8} result9={this.handleClick_pop9} show={this.state.show_pop_modal} close={this.handleClick_POP_CloseModal}/>
-         <ModalSB stealactive={this.state.steal_btn_active} highlight1={this.state.highlight_sb1} highlight2={this.state.highlight_sb2} highlight3={this.state.highlight_sb3} baserunner0={this.state.runnersOnBase[0]} baserunner1={this.state.runnersOnBase[1]} baserunner2={this.state.runnersOnBase[2]} result1={this.handleClick_sb1} result2={this.handleClick_sb2} result3={this.handleClick_sb3} show={this.state.show_sb_modal} close={this.handleClick_SB_CloseModal} />
+         <ModalSB stealactive={this.state.steal_btn_active} highlight1={this.state.highlight_sb1} highlight2={this.state.highlight_sb2} highlight3={this.state.highlight_sb3} baserunner0={this.state.runnersOnBase[0]} baserunner1={this.state.runnersOnBase[1]} baserunner2={this.state.runnersOnBase[2]} result1={this.handleClick_sb1} result2={this.handleClick_sb2} result3={this.handleClick_sb3} show={this.state.show_sb_modal} close={this.handleClick_SB_CloseModal} steal={this.handleClick_steal} />
       </div>
     );
   }
