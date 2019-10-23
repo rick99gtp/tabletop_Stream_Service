@@ -16,10 +16,17 @@ import handleClick_pop6 from './handleClick_pop6';
 import handleClick_pop7 from './handleClick_pop7';
 import handleClick_pop8 from './handleClick_pop8';
 import handleClick_pop9 from './handleClick_pop9';
+import handleClick_wp from './handleClick_wp';
+import handleClick_pb from './handleClick_pb';
+import handleClick_sb1 from './handleClick_sb1';
+import handleClick_sb2 from './handleClick_sb2';
+import handleClick_sb3 from './handleClick_sb3';
+import handleClick_steal from './handleClick_steal';
 
 import ModalK from './ModalK';
 import ModalBB from './ModalBB';
 import ModalPOP from './ModalPOP';
+import ModalSB from './ModalSB';
 
 import handleClick_K_ShowModal from './handleClick_K_ShowModal';
 import handleClick_K_CloseModal from './handleClick_K_CloseModal';
@@ -30,6 +37,9 @@ import handleClick_BB_CloseModal from './handleClick_BB_CloseModal';
 import handleClick_POP_ShowModal from './handleClick_POP_ShowModal';
 import handleClick_POP_CloseModal from './handleClick_POP_CloseModal';
 
+import handleClick_SB_CloseModal from './handleClick_SB_CloseModal';
+import handleClick_SB_ShowModal from './handleClick_SB_ShowModal';
+
 import './index.css';
 
 class App extends React.Component {
@@ -37,12 +47,14 @@ class App extends React.Component {
     super();
 
     this.state = {
+      steal_btn_active: false,
       wp_active: false,
       pb_active: false,
       sb_active: false,
       cs_active: false,
       show_k_modal: false,
       show_pop_modal: false,
+      show_sb_modal: false,
       vTeamName: "Rangers",
       hTeamName: "Angels",
       vTeamAbbr: "TEX",
@@ -51,6 +63,9 @@ class App extends React.Component {
       hBatter: 0,
       vColumn: 0,
       hColumn: 0,
+      highlight_sb1: false,
+      highlight_sb2: false,
+      highlight_sb3: false,
       vPitcherName: "Minor",
       hPitcherName: "Heaney",
       vPitcherThrows: "L",
@@ -3171,6 +3186,17 @@ class App extends React.Component {
     this.handleClick_pop8 = handleClick_pop8.bind(this);
     this.handleClick_pop9 = handleClick_pop9.bind(this);
 
+    this.handleClick_wp = handleClick_wp.bind(this);
+    this.handleClick_pb = handleClick_pb.bind(this);
+
+    // handleClick for SB
+    this.handleClick_SB_ShowModal = handleClick_SB_ShowModal.bind(this);
+    this.handleClick_SB_CloseModal = handleClick_SB_CloseModal.bind(this);
+    this.handleClick_sb1 = handleClick_sb1.bind(this);
+    this.handleClick_sb2 = handleClick_sb2.bind(this);
+    this.handleClick_sb3 = handleClick_sb3.bind(this);
+    this.handleClick_steal = handleClick_steal.bind(this);
+
   }
 
   render() {
@@ -3224,6 +3250,9 @@ class App extends React.Component {
           sb_active={this.state.sb_active}
           cs_active={this.state.cs_active}
           btn_pop={this.handleClick_POP_ShowModal}
+          btn_wp={this.handleClick_wp}
+          btn_pb={this.handleClick_pb}
+          btn_sb={this.handleClick_SB_ShowModal}
         />
         <RightPanel
           hBatter1Name={this.state.hLineup[0].name}
@@ -3250,6 +3279,7 @@ class App extends React.Component {
          <ModalK result1={this.handleClick_k} result2={this.handleClick_k_looking} show={this.state.show_k_modal} close={this.handleClick_K_CloseModal} />
          <ModalBB result1={this.handleClick_bb} result2={this.handleClick_ibb} show={this.state.show_bb_modal} close={this.handleClick_BB_CloseModal} />
          <ModalPOP result1={this.handleClick_pop1} result2={this.handleClick_pop2} result3={this.handleClick_pop3} result4={this.handleClick_pop4} result5={this.handleClick_pop5} result6={this.handleClick_pop6} result7={this.handleClick_pop7} result8={this.handleClick_pop8} result9={this.handleClick_pop9} show={this.state.show_pop_modal} close={this.handleClick_POP_CloseModal}/>
+         <ModalSB stealactive={this.state.steal_btn_active} highlight1={this.state.highlight_sb1} highlight2={this.state.highlight_sb2} highlight3={this.state.highlight_sb3} baserunner0={this.state.runnersOnBase[0]} baserunner1={this.state.runnersOnBase[1]} baserunner2={this.state.runnersOnBase[2]} result1={this.handleClick_sb1} result2={this.handleClick_sb2} result3={this.handleClick_sb3} show={this.state.show_sb_modal} close={this.handleClick_SB_CloseModal} />
       </div>
     );
   }
