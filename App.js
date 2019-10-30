@@ -22,11 +22,28 @@ import handleClick_sb1 from './handleClick_sb1';
 import handleClick_sb2 from './handleClick_sb2';
 import handleClick_sb3 from './handleClick_sb3';
 import handleClick_steal from './handleClick_steal';
+import handleClick_1b from './handleClick_1b';
+import handleClick_2b from './handleClick_2b';
+import handleClick_3b from './handleClick_3b';
+import handleClick_hr from './handleClick_hr';
+import handleClick_2b_stay from './handleClick_2b_stay';
+import handleClick_2b_scores from './handleClick_2b_scores';
+import handleClick_2b_out from './handleClick_2b_out';
+import handleClick_1b_stay_at_second from './handleClick_1b_stay_at_second';
+import handleClick_1b_advance_to_third from './handleClick_1b_advance_to_third';
+import handleClick_1b_out_at_third from './handleClick_1b_out_at_third';
+import handleClick_1b_stay_at_third from './handleClick_1b_stay_at_third';
+import handleClick_1b_scores from './handleClick_1b_scores';
+import handleClick_1b_out_at_home from './handleClick_1b_out_at_home';
+import handleClick_1b_ok_button from './handleClick_1b_ok_button';
+import handleClick_1b_cancel_button from './handleClick_1b_cancel_button';
 
 import ModalK from './ModalK';
 import ModalBB from './ModalBB';
 import ModalPOP from './ModalPOP';
 import ModalSB from './ModalSB';
+import Modal2B from './Modal2B';
+import Modal1B from './Modal1B';
 
 import handleClick_K_ShowModal from './handleClick_K_ShowModal';
 import handleClick_K_CloseModal from './handleClick_K_CloseModal';
@@ -55,6 +72,8 @@ class App extends React.Component {
       show_k_modal: false,
       show_pop_modal: false,
       show_sb_modal: false,
+      show_2b_modal: false,
+      show_1b_modal: false,
       vTeamName: "Rangers",
       hTeamName: "Angels",
       vTeamAbbr: "TEX",
@@ -66,6 +85,12 @@ class App extends React.Component {
       highlight_sb1: false,
       highlight_sb2: false,
       highlight_sb3: false,
+      highlight_1b_stay_at_second: true,
+      highlight_1b_advance_to_third: false,
+      highlight_1b_out_at_third: false,
+      highlight_1b_stay_at_third: true,
+      highlight_1b_scores: false,
+      highlight_1b_out_at_home: false,
       vPitcherName: "Minor",
       hPitcherName: "Heaney",
       vPitcherThrows: "L",
@@ -3197,6 +3222,30 @@ class App extends React.Component {
     this.handleClick_sb3 = handleClick_sb3.bind(this);
     this.handleClick_steal = handleClick_steal.bind(this);
 
+    // handleClick for 1B
+    this.handleClick_1b = handleClick_1b.bind(this);
+
+    this.handleClick_1b_stay_at_second = handleClick_1b_stay_at_second.bind(this);
+    this.handleClick_1b_advance_to_third = handleClick_1b_advance_to_third.bind(this);
+    this.handleClick_1b_out_at_third = handleClick_1b_out_at_third.bind(this);
+    
+    this.handleClick_1b_stay_at_third = handleClick_1b_stay_at_third.bind(this);
+    this.handleClick_1b_scores = handleClick_1b_scores.bind(this);
+    this.handleClick_1b_out_at_home = handleClick_1b_out_at_home.bind(this);
+
+    this.handleClick_1b_ok_button = handleClick_1b_ok_button.bind(this);
+    this.handleClick_1b_cancel_button = handleClick_1b_cancel_button.bind(this);
+
+    // handleClick for 2B
+    this.handleClick_2b = handleClick_2b.bind(this);
+    this.handleClick_2b_stay = handleClick_2b_stay.bind(this);
+    this.handleClick_2b_scores = handleClick_2b_scores.bind(this);
+    this.handleClick_2b_out = handleClick_2b_out.bind(this);
+    // handleClick for 3B
+    this.handleClick_3b = handleClick_3b.bind(this);
+    // handleClick for HR
+    this.handleClick_hr = handleClick_hr.bind(this);
+
   }
 
   render() {
@@ -3253,6 +3302,10 @@ class App extends React.Component {
           btn_wp={this.handleClick_wp}
           btn_pb={this.handleClick_pb}
           btn_sb={this.handleClick_SB_ShowModal}
+          btn_hr={this.handleClick_hr}
+          btn_3b={this.handleClick_3b}
+          btn_2b={this.handleClick_2b}
+          btn_1b={this.handleClick_1b}
         />
         <RightPanel
           hBatter1Name={this.state.hLineup[0].name}
@@ -3280,10 +3333,11 @@ class App extends React.Component {
          <ModalBB result1={this.handleClick_bb} result2={this.handleClick_ibb} show={this.state.show_bb_modal} close={this.handleClick_BB_CloseModal} />
          <ModalPOP result1={this.handleClick_pop1} result2={this.handleClick_pop2} result3={this.handleClick_pop3} result4={this.handleClick_pop4} result5={this.handleClick_pop5} result6={this.handleClick_pop6} result7={this.handleClick_pop7} result8={this.handleClick_pop8} result9={this.handleClick_pop9} show={this.state.show_pop_modal} close={this.handleClick_POP_CloseModal}/>
          <ModalSB stealactive={this.state.steal_btn_active} highlight1={this.state.highlight_sb1} highlight2={this.state.highlight_sb2} highlight3={this.state.highlight_sb3} baserunner0={this.state.runnersOnBase[0]} baserunner1={this.state.runnersOnBase[1]} baserunner2={this.state.runnersOnBase[2]} result1={this.handleClick_sb1} result2={this.handleClick_sb2} result3={this.handleClick_sb3} show={this.state.show_sb_modal} close={this.handleClick_SB_CloseModal} steal={this.handleClick_steal} />
+         <Modal2B show={this.state.show_2b_modal} result1={this.handleClick_2b_stay} result2={this.handleClick_2b_scores} result3={this.handleClick_2b_out} />
+         <Modal1B ok={this.handleClick_1b_ok_button} cancel={this.handleClick_1b_cancel_button} highlight_1b_stay_at_second={this.state.highlight_1b_stay_at_second} highlight_1b_advance_to_third={this.state.highlight_1b_advance_to_third} highlight_1b_out_at_third={this.state.highlight_1b_out_at_third} highlight_1b_stay_at_third={this.state.highlight_1b_stay_at_third} highlight_1b_scores={this.state.highlight_1b_scores} highlight_1b_out_at_home={this.state.highlight_1b_out_at_home} runners={this.state.runnersOnBase} show={this.state.show_1b_modal} result1={this.handleClick_1b_stay_at_second} result2={this.handleClick_1b_advance_to_third} result3={this.handleClick_1b_out_at_third} result4={this.handleClick_1b_stay_at_third} result5={this.handleClick_1b_scores} result6={this.handleClick_1b_out_at_home}/>
       </div>
     );
   }
-  
 }
 
 export default App;

@@ -7,8 +7,6 @@ class ModalSB extends React.Component {
         let sb3ClassName = "";
         let stealBtnClassName = "";
 
-        console.log(this.props);
-
         if(!this.props.show) {
             return null;
         }

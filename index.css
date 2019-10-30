@@ -20,6 +20,7 @@ code {
   background-color: transparent;
   border-radius: 5px;
   cursor: pointer;
+  user-select: none;
 }
 
 .btn-green {
@@ -261,5 +262,28 @@ code {
 .steal-btn-disabled {
   border: 1px solid rgba(0,0,0,.5);
   background: rgba(0,0,0,.5);
+  pointer-events: none;
+}
+
+.show2b {
+
+}
+
+.single-button-active {
+  border: 1px solid red;
+  background: rgba(255, 0, 0, .35);
+  color: white;
+}
+
+.single-button-selected {
+  border: 1px solid green;
+  background: rgba(0, 128, 0, .35);
+  color: white;
+}
+
+.single-button-inactive {
+  border: 1px solid black;
+  background: rgba(0,0,0,.5);
+  color: white;
   pointer-events: none;
 }
