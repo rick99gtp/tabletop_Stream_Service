@@ -10,7 +10,6 @@ const handleClick_1b = function() {
     let newHColumn = 0;
 
     let runnerOn1stStayAtSecond = false;
-    
     let runnerOn2ndStayAtThird = false;
     
     if(this.state.runnersOnBase[0] !== 99) {

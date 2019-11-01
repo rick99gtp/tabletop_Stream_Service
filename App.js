@@ -26,9 +26,10 @@ import handleClick_1b from './handleClick_1b';
 import handleClick_2b from './handleClick_2b';
 import handleClick_3b from './handleClick_3b';
 import handleClick_hr from './handleClick_hr';
-import handleClick_2b_stay from './handleClick_2b_stay';
+import handleClick_2b_cancel_button from './handleClick_2b_cancel_button';
+import handleClick_2b_stay_at_third from './handleClick_2b_stay_at_third';
 import handleClick_2b_scores from './handleClick_2b_scores';
-import handleClick_2b_out from './handleClick_2b_out';
+import handleClick_2b_out_at_home from './handleClick_2b_out_at_home';
 import handleClick_1b_stay_at_second from './handleClick_1b_stay_at_second';
 import handleClick_1b_advance_to_third from './handleClick_1b_advance_to_third';
 import handleClick_1b_out_at_third from './handleClick_1b_out_at_third';
@@ -37,6 +38,7 @@ import handleClick_1b_scores from './handleClick_1b_scores';
 import handleClick_1b_out_at_home from './handleClick_1b_out_at_home';
 import handleClick_1b_ok_button from './handleClick_1b_ok_button';
 import handleClick_1b_cancel_button from './handleClick_1b_cancel_button';
+import handleClick_2b_ok_button from './handleClick_2b_ok_button';
 
 import ModalK from './ModalK';
 import ModalBB from './ModalBB';
@@ -3238,9 +3240,11 @@ class App extends React.Component {
 
     // handleClick for 2B
     this.handleClick_2b = handleClick_2b.bind(this);
-    this.handleClick_2b_stay = handleClick_2b_stay.bind(this);
+    this.handleClick_2b_stay_at_third = handleClick_2b_stay_at_third.bind(this);
     this.handleClick_2b_scores = handleClick_2b_scores.bind(this);
-    this.handleClick_2b_out = handleClick_2b_out.bind(this);
+    this.handleClick_2b_out_at_home = handleClick_2b_out_at_home.bind(this);
+    this.handleClick_2b_cancel_button = handleClick_2b_cancel_button.bind(this);
+    this.handleClick_2b_ok_button = handleClick_2b_ok_button.bind(this);
     // handleClick for 3B
     this.handleClick_3b = handleClick_3b.bind(this);
     // handleClick for HR
@@ -3333,7 +3337,7 @@ class App extends React.Component {
          <ModalBB result1={this.handleClick_bb} result2={this.handleClick_ibb} show={this.state.show_bb_modal} close={this.handleClick_BB_CloseModal} />
          <ModalPOP result1={this.handleClick_pop1} result2={this.handleClick_pop2} result3={this.handleClick_pop3} result4={this.handleClick_pop4} result5={this.handleClick_pop5} result6={this.handleClick_pop6} result7={this.handleClick_pop7} result8={this.handleClick_pop8} result9={this.handleClick_pop9} show={this.state.show_pop_modal} close={this.handleClick_POP_CloseModal}/>
          <ModalSB stealactive={this.state.steal_btn_active} highlight1={this.state.highlight_sb1} highlight2={this.state.highlight_sb2} highlight3={this.state.highlight_sb3} baserunner0={this.state.runnersOnBase[0]} baserunner1={this.state.runnersOnBase[1]} baserunner2={this.state.runnersOnBase[2]} result1={this.handleClick_sb1} result2={this.handleClick_sb2} result3={this.handleClick_sb3} show={this.state.show_sb_modal} close={this.handleClick_SB_CloseModal} steal={this.handleClick_steal} />
-         <Modal2B show={this.state.show_2b_modal} result1={this.handleClick_2b_stay} result2={this.handleClick_2b_scores} result3={this.handleClick_2b_out} />
+         <Modal2B ok={this.handleClick_2b_ok_button} cancel={this.handleClick_2b_cancel_button} highlight_2b_stay_at_third={this.state.highlight_2b_stay_at_third} highlight_2b_scores = {this.state.highlight_2b_scores} highlight_2b_out_at_home = {this.state.highlight_2b_out_at_home} show={this.state.show_2b_modal} result1={this.handleClick_2b_stay_at_third} result2={this.handleClick_2b_scores} result3={this.handleClick_2b_out_at_home} runners={this.state.runnersOnBase} />
          <Modal1B ok={this.handleClick_1b_ok_button} cancel={this.handleClick_1b_cancel_button} highlight_1b_stay_at_second={this.state.highlight_1b_stay_at_second} highlight_1b_advance_to_third={this.state.highlight_1b_advance_to_third} highlight_1b_out_at_third={this.state.highlight_1b_out_at_third} highlight_1b_stay_at_third={this.state.highlight_1b_stay_at_third} highlight_1b_scores={this.state.highlight_1b_scores} highlight_1b_out_at_home={this.state.highlight_1b_out_at_home} runners={this.state.runnersOnBase} show={this.state.show_1b_modal} result1={this.handleClick_1b_stay_at_second} result2={this.handleClick_1b_advance_to_third} result3={this.handleClick_1b_out_at_third} result4={this.handleClick_1b_stay_at_third} result5={this.handleClick_1b_scores} result6={this.handleClick_1b_out_at_home}/>
       </div>
     );
