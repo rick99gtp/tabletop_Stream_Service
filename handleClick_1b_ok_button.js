@@ -9,8 +9,6 @@ const handleClick_1b_ok_button = function() {
     let newVColumn = 0;
     let newHColumn = 0;
 
-    // console.log(this.state);
-
     if(this.state.teamBatting === 0) {
 
         newVArray[this.state.vBatter].cell[this.state.vColumn].firstbasetext = '1B';

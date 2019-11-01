@@ -8,6 +8,21 @@ const handleClick_1b = function() {
     let newHBatter = 0;
     let newVColumn = 0;
     let newHColumn = 0;
+
+    let runnerOn1stStayAtSecond = false;
+    
+    let runnerOn2ndStayAtThird = false;
+    
+    if(this.state.runnersOnBase[0] !== 99) {
+      runnerOn1stStayAtSecond = true;
+    }
+
+    if(this.state.runnersOnBase[1] !== 99) {
+      runnerOn2ndStayAtThird = true;
+    }
+
+    console.log(runnerOn1stStayAtSecond);
+    console.log(runnerOn2ndStayAtThird);
     
     if(this.state.teamBatting === 0) {
 
@@ -55,68 +70,24 @@ const handleClick_1b = function() {
             sb_active: true,
             cs_active: true,
             show_1b_modal: false,
-            highlight_1b_stay_at_second: true
+            highlight_1b_stay_at_second: runnerOn1stStayAtSecond,
+            highlight_1b_stay_at_third: runnerOn2ndStayAtThird
           }
         });
       }
       else {
-        
-
         this.setState({
           show_1b_modal: true,
           vPlayerScoreSheetCell: newVArray,
           runnersOnBase: basesArray,
-          runnersOnBaseColumn: basesColumnArray
+          runnersOnBaseColumn: basesColumnArray,
+          highlight_1b_stay_at_second: runnerOn1stStayAtSecond,
+          highlight_1b_stay_at_third: runnerOn2ndStayAtThird
         });
       }
     }
     else {
-      // if bases are empty
-      if(this.state.runnersOnBase[0] === 99 && this.state.runnersOnBase[1] === 99 && this.state.runnersOnBase[2] === 99) {
-        newHArray[this.state.hBatter].cell[this.state.hColumn].firstbasetext = '1B';
-  
-        this.setState(prevState => {
-  
-          if(prevState.hBatter === 8) {
-            // change current row to normal
-            newHArray[this.state.hBatter].cell[this.state.hColumn].basesbgcolor = "transparent";
-            newHArray[0].cell[prevState.hColumn + 1].basesbgcolor = "#fdf1d4";
-  
-            newHBatter = 0;
-            newHColumn = prevState.hColumn + 1;
-  
-          }
-          else {
-            newHArray[this.state.hBatter].cell[this.state.hColumn].basesbgcolor = "transparent";
-            newHArray[prevState.hBatter + 1].cell[prevState.hColumn].basesbgcolor = "#fdf1d4";
-  
-            newHBatter = prevState.hBatter + 1;
-            newHColumn = prevState.hColumn;
-          }
-
-            newHArray[this.state.hBatter].cell[this.state.hColumn].bgImage = 'batter-to-first.png';
-            basesArray[0] = this.state.hBatter;
-            basesColumnArray[0] = this.state.hColumn;
-        
-            return {
-              hPlayerScoreSheetCell: newHArray,
-              hBatter: newHBatter,
-              hColumn: newHColumn,
-              runnersOnBase: basesArray,
-              runnersOnBaseColumn: basesColumnArray,
-              wp_active: true,
-              pb_active: true,
-              sb_active: true,
-              cs_active: true,
-              show_1b_modal: false
-            }
-        });
-      }
-      else {
-        this.setState({
-          show_1b_modal: true
-        });
-      }
+      
     }
   }
   

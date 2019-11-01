@@ -80,8 +80,7 @@ const handleClick_bb = function() {
         wp_active: true,
         pb_active: true,
         sb_active: true,
-        cs_active: true,
-        highlight_1b_stay_at_second: false
+        cs_active: true
       }
     });
   }
