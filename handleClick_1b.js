@@ -1,18 +1,18 @@
 const handleClick_1b = function() {
 
-    var newVArray = [...this.state.vPlayerScoreSheetCell];
-    var newHArray = [...this.state.hPlayerScoreSheetCell];
-    var basesArray = [...this.state.runnersOnBase];
-    var basesColumnArray = [...this.state.runnersOnBaseColumn];
-    var newVBatter = 0;
-    var newHBatter = 0;
-    var newVColumn = 0;
-    var newHColumn = 0;
+    let newVArray = [...this.state.vPlayerScoreSheetCell];
+    let newHArray = [...this.state.hPlayerScoreSheetCell];
+    let basesArray = [...this.state.runnersOnBase];
+    let basesColumnArray = [...this.state.runnersOnBaseColumn];
+    let newVBatter = 0;
+    let newHBatter = 0;
+    let newVColumn = 0;
+    let newHColumn = 0;
     
     if(this.state.teamBatting === 0) {
 
-      // if bases are empty
-      if(this.state.runnersOnBase[0] === 99) {
+      // if no runners on 1st or 2nd, don't show modal
+      if(this.state.runnersOnBase[0] === 99 && this.state.runnersOnBase[1] === 99) {
         newVArray[this.state.vBatter].cell[this.state.vColumn].firstbasetext = '1B';
   
         this.setState(prevState => {
@@ -54,7 +54,8 @@ const handleClick_1b = function() {
             pb_active: true,
             sb_active: true,
             cs_active: true,
-            show_1b_modal: false
+            show_1b_modal: false,
+            highlight_1b_stay_at_second: true
           }
         });
       }

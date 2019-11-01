@@ -18,9 +18,6 @@ const handleClick_wp = function() {
           newVArray[this.state.runnersOnBase[2]].cell[this.state.runnersOnBaseColumn[2]].homeBaseText = 'WP';
           newVArray[this.state.runnersOnBase[2]].cell[this.state.runnersOnBaseColumn[2]].bgImage = 'batter-to-home.png';
   
-          basesArray[2] = this.state.runnersOnBase[1];
-          basesColumnArray[2] = this.state.runnersOnBaseColumn[1];
-          
           basesArray[2] = 99;
           basesColumnArray[2] = 0;
         }
@@ -67,7 +64,8 @@ const handleClick_wp = function() {
           wp_active: wpActive,
           sb_active: sbActive,
           cs_active: csActive,
-          pb_active: pbActive
+          pb_active: pbActive,
+          highlight_1b_stay_at_second: false
         }
       });
     }
@@ -79,9 +77,6 @@ const handleClick_wp = function() {
           newHArray[this.state.runnersOnBase[2]].cell[this.state.runnersOnBaseColumn[2]].homeBaseText = 'WP';
           newHArray[this.state.runnersOnBase[2]].cell[this.state.runnersOnBaseColumn[2]].bgImage = 'batter-to-home.png';
   
-          basesArray[2] = this.state.runnersOnBase[1];
-          basesColumnArray[2] = this.state.runnersOnBaseColumn[1];
-          
           basesArray[2] = 99;
           basesColumnArray[2] = 0;
         }

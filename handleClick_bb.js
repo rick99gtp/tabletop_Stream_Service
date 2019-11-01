@@ -1,4 +1,4 @@
-const handleClick_bb = function(result) {
+const handleClick_bb = function() {
     
   var newVArray = [...this.state.vPlayerScoreSheetCell];
   var newHArray = [...this.state.hPlayerScoreSheetCell];
@@ -80,7 +80,8 @@ const handleClick_bb = function(result) {
         wp_active: true,
         pb_active: true,
         sb_active: true,
-        cs_active: true
+        cs_active: true,
+        highlight_1b_stay_at_second: false
       }
     });
   }

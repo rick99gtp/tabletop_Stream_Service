@@ -85,6 +85,7 @@ const handleClick_1b_ok_button = function() {
 
             // if runner on 1st stays at 2nd
             if(this.state.highlight_1b_stay_at_second) {
+                console.log(this.state);
                 newVArray[this.state.runnersOnBase[0]].cell[this.state.runnersOnBaseColumn[0]].bgImage = 'batter-to-second.png';
 
                 basesArray[1] = this.state.runnersOnBase[0];
