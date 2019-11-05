@@ -53,8 +53,7 @@ code {
   user-select: none;
   color: black;
   border: 1px solid black;
-  padding-bottom: 5px;
-  
+  padding-bottom: 5px;  
 }
 
 .btn-green:hover {
@@ -242,10 +241,6 @@ code {
   font-size: 14px;
 }
 
-.modal-sb {
-  
-}
-
 .modal-sb-light {
   color: green;
   background: rgba(0, 0, 128, .25);
@@ -286,4 +281,10 @@ code {
   background: rgba(0,0,0,.5);
   color: white;
   pointer-events: none;
+}
+
+.gb-modal {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
 }

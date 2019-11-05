@@ -17,10 +17,7 @@ const handleClick_steal = function() {
         if(this.state.highlight_sb3) {
           newVArray[this.state.runnersOnBase[2]].cell[this.state.runnersOnBaseColumn[2]].homeBaseText = 'SB';
           newVArray[this.state.runnersOnBase[2]].cell[this.state.runnersOnBaseColumn[2]].bgImage = 'batter-to-home.png';
-  
-          basesArray[2] = this.state.runnersOnBase[1];
-          basesColumnArray[2] = this.state.runnersOnBaseColumn[1];
-          
+
           basesArray[2] = 99;
           basesColumnArray[2] = 0;
         }
@@ -83,10 +80,7 @@ const handleClick_steal = function() {
         if(this.state.highlight_sb3) {
           newHArray[this.state.runnersOnBase[2]].cell[this.state.runnersOnBaseColumn[2]].homeBaseText = 'SB';
           newHArray[this.state.runnersOnBase[2]].cell[this.state.runnersOnBaseColumn[2]].bgImage = 'batter-to-home.png';
-  
-          basesArray[2] = this.state.runnersOnBase[1];
-          basesColumnArray[2] = this.state.runnersOnBaseColumn[1];
-          
+            
           basesArray[2] = 99;
           basesColumnArray[2] = 0;
         }

@@ -39,6 +39,28 @@ import handleClick_1b_out_at_home from './handleClick_1b_out_at_home';
 import handleClick_1b_ok_button from './handleClick_1b_ok_button';
 import handleClick_1b_cancel_button from './handleClick_1b_cancel_button';
 import handleClick_2b_ok_button from './handleClick_2b_ok_button';
+import handleClick_CS from './handleClick_CS';
+import handleClick_CS_CloseModal from './handleClick_CS_CloseModal';
+import handleClick_caught_stealing from './handleClick_caught_stealing';
+import handleClick_ld from './handleClick_ld';
+import handleClick_ld_CloseModal from './handleClick_ld_CloseModal';
+import handleClick_ld1 from './handleClick_ld1';
+import handleClick_ld3 from './handleClick_ld3';
+import handleClick_ld4 from './handleClick_ld4';
+import handleClick_ld5 from './handleClick_ld5';
+import handleClick_ld6 from './handleClick_ld6';
+import handleClick_ld7 from './handleClick_ld7';
+import handleClick_ld8 from './handleClick_ld8';
+import handleClick_ld9 from './handleClick_ld9';
+
+import handleClick_gb1 from './handleClick_gb1';
+import handleClick_gb2 from './handleClick_gb2';
+import handleClick_gb3 from './handleClick_gb3';
+import handleClick_gb4 from './handleClick_gb4';
+import handleClick_gb5 from './handleClick_gb5';
+import handleClick_gb6 from './handleClick_gb6';
+
+import handleClick_gb_ok from './handleClick_gb_ok';
 
 import ModalK from './ModalK';
 import ModalBB from './ModalBB';
@@ -46,6 +68,9 @@ import ModalPOP from './ModalPOP';
 import ModalSB from './ModalSB';
 import Modal2B from './Modal2B';
 import Modal1B from './Modal1B';
+import ModalCS from './ModalCS';
+import ModalLD from './ModalLD';
+import ModalGB from './ModalGB';
 
 import handleClick_K_ShowModal from './handleClick_K_ShowModal';
 import handleClick_K_CloseModal from './handleClick_K_CloseModal';
@@ -58,6 +83,9 @@ import handleClick_POP_CloseModal from './handleClick_POP_CloseModal';
 
 import handleClick_SB_CloseModal from './handleClick_SB_CloseModal';
 import handleClick_SB_ShowModal from './handleClick_SB_ShowModal';
+
+import handleClick_GB_CloseModal from './handleClick_GB_CloseModal';
+import handleClick_GB_ShowModal from './handleClick_GB_ShowModal';
 
 import './index.css';
 
@@ -74,8 +102,11 @@ class App extends React.Component {
       show_k_modal: false,
       show_pop_modal: false,
       show_sb_modal: false,
+      show_cs_modal: false,
       show_2b_modal: false,
       show_1b_modal: false,
+      show_gb_modal: false,
+      gb_result: '',
       vTeamName: "Rangers",
       hTeamName: "Angels",
       vTeamAbbr: "TEX",
@@ -3224,6 +3255,11 @@ class App extends React.Component {
     this.handleClick_sb3 = handleClick_sb3.bind(this);
     this.handleClick_steal = handleClick_steal.bind(this);
 
+    // handleClick for CS
+    this.handleClick_CS = handleClick_CS.bind(this);
+    this.handleClick_CS_CloseModal = handleClick_CS_CloseModal.bind(this);
+    this.handleClick_caught_stealing = handleClick_caught_stealing.bind(this);
+
     // handleClick for 1B
     this.handleClick_1b = handleClick_1b.bind(this);
 
@@ -3249,6 +3285,30 @@ class App extends React.Component {
     this.handleClick_3b = handleClick_3b.bind(this);
     // handleClick for HR
     this.handleClick_hr = handleClick_hr.bind(this);
+
+    // handleClick for LD
+    this.handleClick_ld = handleClick_ld.bind(this);
+    this.handleClick_ld_CloseModal = handleClick_ld_CloseModal.bind(this);
+    this.handleClick_GB_CloseModal = handleClick_GB_CloseModal.bind(this);
+    this.handleClick_GB_ShowModal = handleClick_GB_ShowModal.bind(this);
+
+    this.handleClick_ld1 = handleClick_ld1.bind(this);
+    this.handleClick_ld3 = handleClick_ld3.bind(this);
+    this.handleClick_ld4 = handleClick_ld4.bind(this);
+    this.handleClick_ld5 = handleClick_ld5.bind(this);
+    this.handleClick_ld6 = handleClick_ld6.bind(this);
+    this.handleClick_ld7 = handleClick_ld7.bind(this);
+    this.handleClick_ld8 = handleClick_ld8.bind(this);
+    this.handleClick_ld9 = handleClick_ld9.bind(this);
+
+    this.handleClick_gb1 = handleClick_gb1.bind(this);
+    this.handleClick_gb2 = handleClick_gb2.bind(this);
+    this.handleClick_gb3 = handleClick_gb3.bind(this);
+    this.handleClick_gb4 = handleClick_gb4.bind(this);
+    this.handleClick_gb5 = handleClick_gb5.bind(this);
+    this.handleClick_gb6 = handleClick_gb6.bind(this);
+
+    this.handleClick_gb_ok = handleClick_gb_ok.bind(this);
 
   }
 
@@ -3310,6 +3370,9 @@ class App extends React.Component {
           btn_3b={this.handleClick_3b}
           btn_2b={this.handleClick_2b}
           btn_1b={this.handleClick_1b}
+          btn_cs={this.handleClick_CS}
+          btn_ld = {this.handleClick_ld}
+          btn_gb = {this.handleClick_GB_ShowModal}
         />
         <RightPanel
           hBatter1Name={this.state.hLineup[0].name}
@@ -3337,8 +3400,11 @@ class App extends React.Component {
          <ModalBB result1={this.handleClick_bb} result2={this.handleClick_ibb} show={this.state.show_bb_modal} close={this.handleClick_BB_CloseModal} />
          <ModalPOP result1={this.handleClick_pop1} result2={this.handleClick_pop2} result3={this.handleClick_pop3} result4={this.handleClick_pop4} result5={this.handleClick_pop5} result6={this.handleClick_pop6} result7={this.handleClick_pop7} result8={this.handleClick_pop8} result9={this.handleClick_pop9} show={this.state.show_pop_modal} close={this.handleClick_POP_CloseModal}/>
          <ModalSB stealactive={this.state.steal_btn_active} highlight1={this.state.highlight_sb1} highlight2={this.state.highlight_sb2} highlight3={this.state.highlight_sb3} baserunner0={this.state.runnersOnBase[0]} baserunner1={this.state.runnersOnBase[1]} baserunner2={this.state.runnersOnBase[2]} result1={this.handleClick_sb1} result2={this.handleClick_sb2} result3={this.handleClick_sb3} show={this.state.show_sb_modal} close={this.handleClick_SB_CloseModal} steal={this.handleClick_steal} />
+         <ModalCS stealactive={this.state.steal_btn_active} highlight1={this.state.highlight_sb1} highlight2={this.state.highlight_sb2} highlight3={this.state.highlight_sb3} baserunner0={this.state.runnersOnBase[0]} baserunner1={this.state.runnersOnBase[1]} baserunner2={this.state.runnersOnBase[2]} result1={this.handleClick_sb1} result2={this.handleClick_sb2} result3={this.handleClick_sb3} show={this.state.show_cs_modal} close={this.handleClick_CS_CloseModal} steal={this.handleClick_caught_stealing} />
          <Modal2B ok={this.handleClick_2b_ok_button} cancel={this.handleClick_2b_cancel_button} highlight_2b_stay_at_third={this.state.highlight_2b_stay_at_third} highlight_2b_scores = {this.state.highlight_2b_scores} highlight_2b_out_at_home = {this.state.highlight_2b_out_at_home} show={this.state.show_2b_modal} result1={this.handleClick_2b_stay_at_third} result2={this.handleClick_2b_scores} result3={this.handleClick_2b_out_at_home} runners={this.state.runnersOnBase} />
          <Modal1B ok={this.handleClick_1b_ok_button} cancel={this.handleClick_1b_cancel_button} highlight_1b_stay_at_second={this.state.highlight_1b_stay_at_second} highlight_1b_advance_to_third={this.state.highlight_1b_advance_to_third} highlight_1b_out_at_third={this.state.highlight_1b_out_at_third} highlight_1b_stay_at_third={this.state.highlight_1b_stay_at_third} highlight_1b_scores={this.state.highlight_1b_scores} highlight_1b_out_at_home={this.state.highlight_1b_out_at_home} runners={this.state.runnersOnBase} show={this.state.show_1b_modal} result1={this.handleClick_1b_stay_at_second} result2={this.handleClick_1b_advance_to_third} result3={this.handleClick_1b_out_at_third} result4={this.handleClick_1b_stay_at_third} result5={this.handleClick_1b_scores} result6={this.handleClick_1b_out_at_home}/>
+         <ModalLD result1={this.handleClick_ld1} result3={this.handleClick_ld3} result4={this.handleClick_ld4} result5={this.handleClick_ld5} result6={this.handleClick_ld6} result7={this.handleClick_ld7} result8={this.handleClick_ld8} result9={this.handleClick_ld9} show={this.state.show_ld_modal} close={this.handleClick_ld_CloseModal} />
+         <ModalGB gb_ok={this.handleClick_gb_ok} gb_result={this.state.gb_result} result1={this.handleClick_gb1} result2={this.handleClick_gb2} result3={this.handleClick_gb3} result4={this.handleClick_gb4} result5={this.handleClick_gb5} result6={this.handleClick_gb6} show={this.state.show_gb_modal} close={this.handleClick_GB_CloseModal} />
       </div>
     );
   }
