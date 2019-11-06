@@ -94,6 +94,8 @@ class App extends React.Component {
     super();
 
     this.state = {
+      gb_thrown_to: 0,
+      gb_selected: 0,
       steal_btn_active: false,
       wp_active: false,
       pb_active: false,
@@ -106,7 +108,6 @@ class App extends React.Component {
       show_2b_modal: false,
       show_1b_modal: false,
       show_gb_modal: false,
-      gb_result: '',
       vTeamName: "Rangers",
       hTeamName: "Angels",
       vTeamAbbr: "TEX",
@@ -3404,7 +3405,7 @@ class App extends React.Component {
          <Modal2B ok={this.handleClick_2b_ok_button} cancel={this.handleClick_2b_cancel_button} highlight_2b_stay_at_third={this.state.highlight_2b_stay_at_third} highlight_2b_scores = {this.state.highlight_2b_scores} highlight_2b_out_at_home = {this.state.highlight_2b_out_at_home} show={this.state.show_2b_modal} result1={this.handleClick_2b_stay_at_third} result2={this.handleClick_2b_scores} result3={this.handleClick_2b_out_at_home} runners={this.state.runnersOnBase} />
          <Modal1B ok={this.handleClick_1b_ok_button} cancel={this.handleClick_1b_cancel_button} highlight_1b_stay_at_second={this.state.highlight_1b_stay_at_second} highlight_1b_advance_to_third={this.state.highlight_1b_advance_to_third} highlight_1b_out_at_third={this.state.highlight_1b_out_at_third} highlight_1b_stay_at_third={this.state.highlight_1b_stay_at_third} highlight_1b_scores={this.state.highlight_1b_scores} highlight_1b_out_at_home={this.state.highlight_1b_out_at_home} runners={this.state.runnersOnBase} show={this.state.show_1b_modal} result1={this.handleClick_1b_stay_at_second} result2={this.handleClick_1b_advance_to_third} result3={this.handleClick_1b_out_at_third} result4={this.handleClick_1b_stay_at_third} result5={this.handleClick_1b_scores} result6={this.handleClick_1b_out_at_home}/>
          <ModalLD result1={this.handleClick_ld1} result3={this.handleClick_ld3} result4={this.handleClick_ld4} result5={this.handleClick_ld5} result6={this.handleClick_ld6} result7={this.handleClick_ld7} result8={this.handleClick_ld8} result9={this.handleClick_ld9} show={this.state.show_ld_modal} close={this.handleClick_ld_CloseModal} />
-         <ModalGB gb_ok={this.handleClick_gb_ok} gb_result={this.state.gb_result} result1={this.handleClick_gb1} result2={this.handleClick_gb2} result3={this.handleClick_gb3} result4={this.handleClick_gb4} result5={this.handleClick_gb5} result6={this.handleClick_gb6} show={this.state.show_gb_modal} close={this.handleClick_GB_CloseModal} />
+         <ModalGB thrown_to={this.state.gb_thrown_to} runners={this.state.runnersOnBase} cur_outs = {this.state.outs} gb_ok={this.handleClick_gb_ok} pos={this.state.gb_selected} result1={this.handleClick_gb1} result2={this.handleClick_gb2} result3={this.handleClick_gb3} result4={this.handleClick_gb4} result5={this.handleClick_gb5} result6={this.handleClick_gb6} show={this.state.show_gb_modal} close={this.handleClick_GB_CloseModal} />
       </div>
     );
   }
